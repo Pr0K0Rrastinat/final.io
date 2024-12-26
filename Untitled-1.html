@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Dilnaz Khismetullina - Personal Page</title>
+    <meta name="description" content="Personal webpage and portfolio for Dilnaz Khismetullina, student of UI/UX design">
+    <meta name="author" content="Dilnaz Khismetullina - 2024">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- FONT -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;700&family=Poppins:wght@400;600&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/skeleton.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/ali-favicon.png">
+
+    <!-- Custom CSS -->
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to right, #ff6e7f, #bfe9ff);
+            /* Gradient background */
+            color: #333;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background-attachment: fixed;
+        }
+
+        .navbar {
+            background-color: rgba(0, 0, 0, 0.6);
+            /* Darker background for navbar */
+            padding: 1.5em 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        .navbar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .navbar li {
+            margin: 0 2em;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: white;
+            font-weight: 600;
+            font-size: 1.2em;
+            transition: color 0.3s;
+        }
+
+        .navbar a:hover {
+            color: #ffdd57;
+            /* Yellow hover effect */
+        }
+
+        .container {
+            padding: 5em 2em;
+            text-align: center;
+        }
+
+        .title-header {
+            margin-bottom: 4em;
+            color: white;
+        }
+
+        .title-header h2 {
+            font-size: 3.5em;
+            /* Larger font size */
+            margin-bottom: 0.5em;
+            letter-spacing: 2px;
+            color: #fff;
+        }
+
+        .title-header h4,
+        .project h4 {
+            font-size: 1.8em;
+            color: #FFFACD;
+            ;
+            /* Золотой цвет */
+            font-weight: bold;
+            /* Делает текст жирным */
+            letter-spacing: 1px;
+            /* Добавляет немного пространства между буквами */
+            margin-bottom: 0.5em;
+            /* Пространство после текста */
+        }
+
+        .purple-bar {
+            height: 5px;
+            background-color: #ffdd57;
+            margin: 3em 0;
+            width: 100px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .project-image {
+            border-radius: 15px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 700px;
+            margin: 2em auto;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .project-image:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .ghost-button-transition {
+            display: inline-block;
+            padding: 0.8em 1.5em;
+            border: 2px solid #ffdd57;
+            border-radius: 8px;
+            color: #ffdd57;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2em;
+            transition: all 0.3s ease;
+            margin-top: 1.5em;
+            background-color: rgba(255, 221, 87, 0.1);
+        }
+
+        .ghost-button-transition:hover {
+            background-color: #ffdd57;
+            color: white;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1em 0;
+            background: none;
+            /* Убираем общий фон у футера */
+            margin-top: 3em;
+            font-size: 0.9em;
+            /* Немного уменьшенный размер текста */
+        }
+
+        footer p {
+            display: inline-block;
+            /* Ограничиваем фон размером текста */
+            padding: 0.5em 1em;
+            background: linear-gradient(to right, #ff6e7f, #bfe9ff);
+            /* Градиент как у body */
+            color: #333;
+            /* Цвет текста совпадает с основным */
+            border-radius: 8px;
+            /* Добавляем немного скругления углов */
+        }
+    </style>
+
+    <!-- JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const images = document.querySelectorAll('.project-image');
+
+            images.forEach(image => {
+                image.addEventListener('mouseover', () => {
+                    image.style.boxShadow = '0 8px 25px rgba(0, 0, 0, 0.15)';
+                });
+
+                image.addEventListener('mouseout', () => {
+                    image.style.boxShadow = '0 6px 20px rgba(0, 0, 0, 0.1)';
+                });
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div class="navbar">
+        <ul>
+            <li><a class="active" href="index.html">Portfolio</a></li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="u-full-width title-header">
+                <h2>Dilnaz Khismetullina</h2>
+                <h4>4th-year student specializing in UI/UX Design</h4>
+            </div>
+
+            <div class="twelve columns project">
+                <div class="purple-bar"></div>
+                <img class="project-image" src="assets/1.png" alt="myMentor project image">
+                <h4>A robor-guide</h4>
+                <p>Trendy robot guide that will help you not get lost in the university halls</p>
+                <a class="ghost-button-transition" href="assets/Presentation (1).pdf"
+                    target="_blank">View Project</a>
+
+            </div>
+
+            <div class="twelve columns project">
+                <div class="purple-bar"></div>
+                <img class="project-image" src="assets/2ДБДВДАДuД{ДД.png" alt="Project 2 image">
+                <h4>SDU Market</h4>
+                <p>An idea for improving the market at SDU</p>
+                <a class="ghost-button-transition" href="assets/2.pdf">View Project</a>
+            </div>
+
+            <div class="twelve columns project">
+                <div class="purple-bar"></div>
+                <img class="project-image" src="assets/2.jpg" alt="Project 3 image">
+                <h4>WAKE UP!!!</h4>
+                <p>An app for improving sleep</p>
+                <a class="ghost-button-transition" href="2.html">View Project</a>
+            </div>
+
+            <div class="twelve columns project">
+                <div class="purple-bar"></div>
+                <img class="project-image" src="assets/4.png" alt="Project 4 image">
+                <h4>Reflection</h4>
+
+                <a class="ghost-button-transition" href="assets/reflection.pdf">View Reflection</a>
+
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Dilnaz Khismetullina. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
